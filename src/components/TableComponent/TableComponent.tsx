@@ -5,10 +5,10 @@ import {
 } from "material-react-table";
 import { memo, useMemo } from "react";
 import "./TableComponent.css";
-import { ITableComponentProps, NewMarketData } from "./TableComponent.type";
+import { ITableComponentProps, MarketData } from "./TableComponent.type";
 
 const TableComponent = ({ data, maxVal }: ITableComponentProps) => {
-  const columns = useMemo<MRT_ColumnDef<NewMarketData>[]>(
+  const columns = useMemo<MRT_ColumnDef<MarketData>[]>(
     () => [
       {
         accessorKey: "strike",
@@ -283,7 +283,7 @@ const TableComponent = ({ data, maxVal }: ITableComponentProps) => {
     initialState: {
       showColumnFilters: true,
     },
-    getSubRows: (row: NewMarketData) => row.subRow,
+    getSubRows: (row: MarketData) => row.subRow,
     enableExpanding: true,
 
     muiTablePaperProps: {

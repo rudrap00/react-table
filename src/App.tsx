@@ -1,17 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import SliderComponent from "./components/SliderComponent/SliderComponent";
 import TableComponent from "./components/TableComponent/TableComponent";
-import {
-  MarketData,
-  NewMarketData,
-} from "./components/TableComponent/TableComponent.type";
+import { MarketData } from "./components/TableComponent/TableComponent.type";
 import TableHeader from "./components/TableHeader/TableHeader";
 import marketData from "./constants/marketData.json";
 
 function App() {
   const [val, setVal] = useState<number>(10);
   const [value, setValue] = useState<number>(10);
-  const [data, setData] = useState<NewMarketData[]>([]);
+  const [data, setData] = useState<MarketData[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
